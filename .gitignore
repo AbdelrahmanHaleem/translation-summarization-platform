@@ -1,0 +1,10 @@
+/vendor/
+node_modules/
+frontend/node_modules/
+npm-debug.log
+yarn-error.log
+services/ar2en-service/venv/lib
+services/ar2en-service/venv/lib64
+venv/lib
+venv/lib64
+.idea
