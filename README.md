@@ -38,7 +38,7 @@ A powerful web application that provides translation services between Arabic and
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/AbdelrahmanHaleem/translation-summarization-platform.git
+git clone https://github.com/yourusername/translation-summarization-platform.git
 cd translation-summarization-platform
 ```
 
