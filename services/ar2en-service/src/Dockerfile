@@ -6,14 +6,20 @@ WORKDIR /app
 
 # Copy requirements and install
 COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY ./src /app
+COPY app.py /app/
 
-# Expose port for Flask
-EXPOSE 5000
+# Set the Flask app environment variable
+ENV FLASK_APP=app.py
 
-# Command to run the app
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+# Expose the application port
+EXPOSE 8000
 
+#Add a health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 CMD curl -f http://localhost:8000/health || exit 1
+
+# Command to run the application
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8000"]

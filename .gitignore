@@ -8,3 +8,11 @@ services/ar2en-service/venv/lib64
 venv/lib
 venv/lib64
 .idea
+*/.env
+
+
+#__pycache__/
+#*.pyc
+#*.pyo
+#.git
+#.DS_Store
